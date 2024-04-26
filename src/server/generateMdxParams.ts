@@ -7,7 +7,11 @@ export async function generateMdxParams() {
   });
 
   const mdxPaths = files.map((file) => {
-    return file.replace("src/content/", "").replace(".mdx", "").split("/");
+    return file
+      .replace("src/content/", "")
+      .replace(".mdx", "")
+      .replace("/index", "/")
+      .split("/");
   });
 
   return mdxPaths.map((path) => {

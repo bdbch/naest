@@ -7,6 +7,10 @@ const config: SidebarConfig = [
         title: "Naest",
         path: "/",
       },
+      {
+        title: "Changelog",
+        path: "/changelog",
+      },
     ],
   },
   {
@@ -20,6 +24,10 @@ const config: SidebarConfig = [
         title: "Creating your first documentation",
         path: "/getting-started/first-documentation",
       },
+      {
+        title: "Customizing the documentation",
+        path: "/getting-started/customizing-the-documentation",
+      },
     ],
   },
   {
@@ -32,6 +40,10 @@ const config: SidebarConfig = [
       {
         title: "Using MDX",
         path: "/advanced/using-mdx",
+      },
+      {
+        title: "Metadata",
+        path: "/advanced/metadata",
       },
     ],
   },

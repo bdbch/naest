@@ -33,3 +33,95 @@ You can now open the newly created `about.mdx` file and add some content to it. 
 Hello world! **This** is my first documentation page.
 You can read more about me on [my website](https://my-website.dev)
 ```
+
+## 3. Add the page to the navigation
+
+After creating the page and adding content to it, you can add it to the sidebar navigation. To do this, open the `src/content/sitebar.ts` where you will find the existing configuration for your sidebar.
+This sidebar file is automatically consumed by naest and will be able to be rendered in your application. By default this is done in the `src/components/Sidebar.tsx` file.
+
+```ts
+// imports the necessary types
+import { SidebarConfig } from "@/types";
+
+// define the sidebar configuration
+// a sidebar configuration consists of an array of sidebar
+// categories that contain an array of sidebar items
+const config: SidebarConfig = [
+  {
+    items: [
+      {
+        title: "Naest",
+        path: "/",
+      },
+    ],
+  },
+  {
+    title: "Getting started",
+    items: [
+      {
+        title: "Setup a new project",
+        path: "/getting-started/setup-a-new-project",
+      },
+      {
+        title: "Creating your first documentation",
+        path: "/getting-started/first-documentation",
+      },
+    ],
+  },
+  {
+    title: "Advanced",
+    items: [
+      {
+        title: "Configuring Sidebars",
+        path: "/advanced/sidebars",
+      },
+      {
+        title: "Using MDX",
+        path: "/advanced/using-mdx",
+      },
+    ],
+  },
+];
+
+export default config;
+```
+
+Lets add a new category called `About the project` into the sidebar configuration and add the `about` page to it.
+
+```ts
+// imports the necessary types
+import { SidebarConfig } from "@/types";
+
+// define the sidebar configuration
+// a sidebar configuration consists of an array of sidebar
+// categories that contain an array of sidebar items
+const config: SidebarConfig = [
+  // ...
+  {
+    title: "About the project",
+    items: [
+      {
+        title: "About",
+        path: "/about",
+      },
+    ],
+  },
+];
+
+export default config;
+```
+
+Great job! Now you should see the new category in the sidebar with the `About` page.
+
+## 4. Add frontmatter data for metadata
+
+The last thing that is missing from your new page is meta data that can be used to display additional information about the page. This can be done by adding frontmatter data to the top of your `.mdx` file.
+
+```mdx
+---
+title: "About my documentation"
+description: "This is my first documentation page"
+---
+```
+
+Read more about metadata in our [advanced metadata guide](/advanced/metadata).
