@@ -1,5 +1,6 @@
 import { SidebarConfig } from "@/types";
 import { DocsSidebar } from "./DocsSidebar";
+import { TableOfContent } from "./TableOfContent";
 
 export const Layout = ({
   children,
@@ -13,9 +14,11 @@ export const Layout = ({
       <div className="lg:col-span-2">
         {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
       </div>
-      <div className="lg:col-span-8">{children}</div>
+      <div className="lg:col-span-8">
+        <div className="max-w-[80ch]">{children}</div>
+      </div>
       <div className="lg:col-span-2">
-        {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
+        <TableOfContent />
       </div>
     </div>
   );
