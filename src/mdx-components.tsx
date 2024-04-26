@@ -72,7 +72,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: (props) => (
       <pre
         {...props}
-        className="p-4 bg-neutral-900/50 rounded shadow w-full border border-neutral-800/70 overflow-auto text-sm my-8 first:mt-0 last:mb-0"
+        className="p-4 bg-neutral-900/50 rounded shadow w-full border border-neutral-800/70 overflow-auto text-sm my-8 first:mt-0 last:mb-0 hljs"
       />
     ),
     code: (props) => <code {...props} className="font-mono" />,

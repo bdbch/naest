@@ -9,3 +9,27 @@
 body {
   @apply bg-black text-white antialiased;
 }
+
+.hljs {
+  .hljs-comment {
+    @apply text-neutral-500;
+  }
+
+  .hljs-keyword {
+    @apply text-purple-400;
+  }
+
+  .hljs-title,
+  .hljs-attr,
+  .hljs-section {
+    @apply text-rose-500;
+  }
+
+  .hljs-string {
+    @apply text-lime-400;
+  }
+
+  .hljs-strong {
+    @apply font-bold;
+  }
+}
