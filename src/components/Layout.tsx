@@ -29,7 +29,7 @@ export const Layout = ({
           </div>
         </div>
       </header>
-      <div className="grid gap-6 lg:grid-cols-12 py-12 container">
+      <div className="grid gap-6 lg:grid-cols-12 py-20 container">
         <div className="lg:col-span-3 order-0">
           <div className="sticky top-24 max-h-[50vh] h-full overflow-y-auto">
             {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}

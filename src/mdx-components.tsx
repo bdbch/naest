@@ -82,5 +82,28 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         className="w-full h-auto rounded shadow my-8 first:mt-0 last:mb-0"
       />
     ),
+    table: (props) => (
+      <div className="w-full overflow-auto border rounded border-neutral-800">
+        <table {...props} className="w-full" />
+      </div>
+    ),
+    thead: (props) => (
+      <thead {...props} className="border-b border-neutral-800" />
+    ),
+    tr: (props) => (
+      <tr {...props} className="border-b last:border-b-0 border-neutral-800" />
+    ),
+    td: (props) => (
+      <td
+        {...props}
+        className="border-r last:border-r-0 border-neutral-800 whitespace-nowrap p-1.5 text-left text-sm"
+      />
+    ),
+    th: (props) => (
+      <th
+        {...props}
+        className="border-r last:border-r-0 border-neutral-800 font-bold whitespace-nowrap p-1.5 text-left"
+      />
+    ),
   };
 }
