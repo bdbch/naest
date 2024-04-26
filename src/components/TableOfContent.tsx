@@ -17,11 +17,11 @@ export const TableOfContent = () => {
   }, [pathname]);
 
   return (
-    <div>
+    <div className="grid">
       {headlines.map((headline) => (
         <div key={headline.id}>
           <a
-            className="text-white/50 hover:text-white"
+            className="text-white/50 hover:text-white text-sm block p-2 border-l border-l-neutral-800 hover:border-l-white transition-colors"
             href={`#${headline.id}`}
           >
             {headline.textContent}
