@@ -1,4 +1,5 @@
 import { DocsSidebar } from "@/components/DocsSidebar";
+import { Layout } from "@/components/Layout";
 import { generateMdxParams } from "@/server/generateMdxParams";
 import { getSidebar } from "@/server/getSidebar";
 
@@ -15,15 +16,5 @@ export default async function MdxPageLayout({
 }>) {
   const sidebarConfig = await getSidebar(params.mdxPath);
 
-  return (
-    <div className="grid gap-6 lg:grid-cols-12">
-      <div className="lg:col-span-2">
-        {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
-      </div>
-      <div className="lg:col-span-8">{children}</div>
-      <div className="lg:col-span-2">
-        {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
-      </div>
-    </div>
-  );
+  return <Layout sidebarConfig={sidebarConfig}>{children}</Layout>;
 }

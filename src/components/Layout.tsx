@@ -1,0 +1,22 @@
+import { SidebarConfig } from "@/types";
+import { DocsSidebar } from "./DocsSidebar";
+
+export const Layout = ({
+  children,
+  sidebarConfig,
+}: {
+  children: React.ReactNode;
+  sidebarConfig: SidebarConfig | null;
+}) => {
+  return (
+    <div className="grid gap-6 lg:grid-cols-12">
+      <div className="lg:col-span-2">
+        {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
+      </div>
+      <div className="lg:col-span-8">{children}</div>
+      <div className="lg:col-span-2">
+        {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
+      </div>
+    </div>
+  );
+};
