@@ -31,13 +31,17 @@ export const Layout = ({
       </header>
       <div className="grid gap-6 lg:grid-cols-12 py-12 container">
         <div className="lg:col-span-3">
-          {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
+          <div className="sticky top-24 max-h-[50vh] h-full overflow-y-auto">
+            {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
+          </div>
         </div>
         <div className="lg:col-span-7">
           <div className="max-w-[80ch]">{children}</div>
         </div>
-        <div className="lg:col-span-2">
-          <TableOfContent />
+        <div className="lg:col-span-2 relative">
+          <div className="sticky top-24 max-h-[50vh] h-full overflow-y-auto">
+            <TableOfContent />
+          </div>
         </div>
       </div>
     </div>
