@@ -1,0 +1,35 @@
+---
+title: "Setup a new project"
+description: "This guide helps you to setup a new documentation project with Naest"
+---
+
+# Setup a new project
+
+**Note**: In the future I will add a `create-naest-app` command to make it easier to setup a new project.
+
+## Requirements
+
+- [Node.js](https://nodejs.org/en/) (v14.15.4 or higher)
+- [npm](https://www.npmjs.com/) (v6.14.10 or higher)
+- [git](https://git-scm.com/)
+- Knowledge with [React](https://reactjs.org/)
+- Knowledge with [Next.js](https://nextjs.org/)
+- Knowledge with [MDX](https://mdxjs.com/) & [Markdown](https://www.markdownguide.org/)
+
+## Cloning the project
+
+To setup a new project with Naest, you can clone the repository from GitHub and install the dependencies. Make sure to remove the `.git` folder and reinitialize it if you don't want to use the existing repositories commit history.
+
+```bash
+# clone from github
+git clone https://github.com/bdbch/naest.git
+
+# remove the .git folder and reinitialize it
+rm -rf .git
+git init
+
+# install dependencies
+npm install
+```
+
+Read more about setting up your first documentation [here](/getting-started/first-documentation).

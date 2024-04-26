@@ -13,8 +13,8 @@ const config: SidebarConfig = [
     title: "Getting started",
     items: [
       {
-        title: "Installation",
-        path: "/getting-started/installation",
+        title: "Setup a new project",
+        path: "/getting-started/setup-a-new-project",
       },
       {
         title: "Creating your first documentation",

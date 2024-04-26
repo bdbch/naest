@@ -12,7 +12,7 @@ export const Layout = ({
 }) => {
   return (
     <div>
-      <header className="sticky top-0 border-b border-neutral-800 bg-black bg-opacity-80 backdrop-blur-lg">
+      <header className="sticky top-0 border-b border-neutral-800 bg-black bg-opacity-80 backdrop-blur-lg z-10">
         <div className="container h-16 flex gap-8 items-center justify-between">
           <Link href="/" className="text-sm font-bold">
             naest.dev
@@ -30,15 +30,15 @@ export const Layout = ({
         </div>
       </header>
       <div className="grid gap-6 lg:grid-cols-12 py-12 container">
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-3 order-0">
           <div className="sticky top-24 max-h-[50vh] h-full overflow-y-auto">
             {sidebarConfig ? <DocsSidebar config={sidebarConfig} /> : null}
           </div>
         </div>
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 order-2">
           <div className="max-w-[80ch]">{children}</div>
         </div>
-        <div className="lg:col-span-2 relative">
+        <div className="lg:col-span-2 relative order-1 lg:order-3">
           <div className="sticky top-24 max-h-[50vh] h-full overflow-y-auto">
             <TableOfContent />
           </div>

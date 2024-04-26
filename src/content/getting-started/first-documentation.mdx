@@ -1,6 +1,35 @@
 ---
-title: "First documentation"
-description: "First documentation"
+title: "Creating your first documentation"
+description: "This guide will help you creating your first documentation with Naest"
 ---
 
-# First documentation
+# Creating your first documentation
+
+After cloning and setting up your project via the instructions found [here](/getting-started/setup-a-new-project), you can start creating your first documentation. In this guide we'll go through the following steps:
+
+1. Create a new page
+2. Add content to the page
+3. Add the page to the navigation
+4. Add frontmatter data for metadata
+
+## 1. Create a new page
+
+Creating a new page is as easy as creating a new file in the `src/content` directory. Just create a new `.mdx` file with the name of your page.
+For this example we'll create a new file called `about.mdx` in our `src/content` directory.
+
+```bash
+touch src/content/about.mdx
+```
+
+You should now find your new file in the `src/content` directory and in your browser by opening `http://localhost:3000/about`.
+
+## 2. Add content to the page
+
+You can now open the newly created `about.mdx` file and add some content to it. You can use markdown syntax to format your content.
+
+```mdx
+# About my documentation
+
+Hello world! **This** is my first documentation page.
+You can read more about me on [my website](https://my-website.dev)
+```

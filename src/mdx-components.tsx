@@ -10,14 +10,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h1
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
+        className="text-4xl font-bold mt-24 mb-6 pb-2 border-b border-neutral-800 first:mt-0 last:mb-0"
       />
     ),
     h2: (props) => (
       <h2
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-3xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
+        className="text-3xl font-bold mt-24 mb-6 pb-2 border-b border-neutral-800 first:mt-0 last:mb-0"
       />
     ),
     h3: (props) => (

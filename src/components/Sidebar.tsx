@@ -13,7 +13,7 @@ export const SidebarGroup = ({
   return (
     <div>
       {title ? (
-        <div className="text-xs uppercase text-white/50 font-medium mb-1">
+        <div className="text-xxs uppercase text-white/70 font-semibold tracking-wider mb-2">
           {title}
         </div>
       ) : null}

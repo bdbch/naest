@@ -8,14 +8,19 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "1rem",
-      screens: {
-        sm: "100%",
-        md: "100%",
-        lg: "1280px",
-        xl: "1440px",
+    extend: {
+      fontSize: {
+        xxs: "0.625rem",
+      },
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {
+          sm: "100%",
+          md: "100%",
+          lg: "1280px",
+          xl: "1440px",
+        },
       },
     },
   },
