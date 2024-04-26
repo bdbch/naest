@@ -76,5 +76,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     code: (props) => <code {...props} className="font-mono" />,
+    img: (props) => (
+      <img
+        {...props}
+        className="w-full h-auto rounded shadow my-8 first:mt-0 last:mb-0"
+      />
+    ),
   };
 }
