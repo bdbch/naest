@@ -10,42 +10,42 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h1
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-4xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     h2: (props) => (
       <h2
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-3xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     h3: (props) => (
       <h3
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-2xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     h4: (props) => (
       <h4
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-xl font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     h5: (props) => (
       <h5
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-lg font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     h6: (props) => (
       <h6
         {...props}
         id={slugify(props.children?.toString() || "", { lower: true })}
-        className="text-4xl font-bold mt-12 mb-6 first:mt-0 last:mb-0"
+        className="text-base font-bold mt-16 mb-6 first:mt-0 last:mb-0"
       />
     ),
     p: (props) => (
