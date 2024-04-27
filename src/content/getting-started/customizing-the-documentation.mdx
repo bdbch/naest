@@ -4,3 +4,76 @@ description: "This guide helps you to customize your Naest documentation"
 ---
 
 # Customize your documentation
+
+Naest is meant to be customized to your needs. This guide will help you to customize your documentation to your liking.
+
+## The directory structure
+
+Naest is using Next's new **App router** so if you are familiar with it you should feel right at home. The directory structure is as follows:
+
+### The app directory
+
+This is where the heart of your application lives. The Next router is using a file based routing system in this directory.
+Make sure to [read the Next.js documentation](https://nextjs.org/docs/app/building-your-application/routing) to get a better understanding of how this works.
+
+The most important files are the following:
+
+- `layout.tsx` - The root layout that wraps all your pages.
+- `(root)/layout.tsx` - The layout of your index page
+- `(root)/page.tsx` - The index page itself
+- `[...mdxPath]/layout.tsx` - The layout of your dynamic MDX pages
+- `[...mdxPath]/page.tsx` - The dynamic MDX page itself
+
+You probably realized that there is not much content inside the `page.tsx` and `layout.tsx` - that's because the content is coming from the MDX files in the `content` directory.
+
+If you see something like:
+
+```tsx
+export async function generateStaticParams() {
+  return await generateMdxParams();
+}
+```
+
+or
+
+```tsx
+const mdx = await loadMdx(params.mdxPath);
+```
+
+please note that if you touch this function, you could potentially break the static generation of your site. Those functions are needed for
+
+1. Generating static pages for your MDX files (the `generateStaticParams` function is used to generate the static paths for your MDX files)
+2. Loading content from your MDX files and passing it to your components & metadata generation logic
+
+In general you shouldn't be required to change to much of the logic in those files but the possibility is there if you need it.
+
+If you want to manually create pages you can do so by creating new page files in the `app` directory.
+
+### The components directory
+
+This directory is very self-explanatory. It contains all the components that are used in the application. You can add new components here or modify existing ones.
+By default it includes a few components like the Layout or Content components. Feel free to edit and change those components - just make sure to not break the application! 😉
+
+### The content directory
+
+This is the magic directory itself. Content is king and this is where your content goes. The logic described in the [app directory](#the-app-directory) is used to load and render the content from this directory.
+You can also find your sidebar configuration files here. [Read more about the sidebar configuration](/advanced/sidebars).
+
+### The server directory
+
+This directory contains all the server logic that is used to generate your static site. There are a few important files in this directory:
+
+- `generateMdxParams.ts` - This file is used to generate the static paths for your MDX files
+- `generateMeta.ts` - This file is used to generate the metadata for your pages
+- `getSidebar.ts` - This file includes logic to load sidebar configurations from the content folder
+- `loadMdx.ts` - This file includes logic to load mdx content and frontmatter from your MDX files
+
+Feel free to edit and change those files if you need to. Just be careful as this is the heart of your application and you could potentially break the static generation of your site.
+
+## Customizing MDX components
+
+Naest is using MDX to render content. The coolest thing about MDX is that you can use React components in your markdown files. This allows us to create
+custom components for basic HTML elements like tables, paragraphs, headings, etc.
+
+You can find the component specifications in the `src/mdx-components.tsx` file. Feel free to add new components or modify existing ones. We are using Tailwind to style our components so make sure to use Tailwind classes in your components.
+In theory you could also use other CSS frameworks or plain CSS to style your components but we recommend using Tailwind as it is already included in the project.
