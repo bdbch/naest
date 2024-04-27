@@ -1,4 +1,4 @@
-![Naest](/images/cover.png)
+![Naest](./public/images/cover.png)
 
 # Welcome to Naest
 
