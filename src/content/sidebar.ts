@@ -45,6 +45,14 @@ const config: SidebarConfig = [
         title: "Metadata",
         path: "/advanced/metadata",
       },
+      {
+        title: "Generating a sitemap.xml",
+        path: "/advanced/sitemap",
+      },
+      {
+        title: "Generating a robots.txt",
+        path: "/advanced/robots",
+      },
     ],
   },
 ];
