@@ -5,4 +5,26 @@ description: Learn how to generate a robots.txt for your site
 
 # Generating the robots.txt
 
-TBD
+Naest supports robots.txt generation by default. In this section, you'll learn all about generating and customizing your website's robots.txt file using Naest.
+
+## robots.txt Generation
+
+Generating the `robots.txt` file in your Next.js project is straightforward. Next.js provides a built-in `robots.ts` route to handle this task seamlessly.
+
+### Default Configuration
+
+By default, Next.js generates a basic `robots.txt` file that allows all web crawlers to access all parts of your website. This default configuration is suitable for many websites.
+
+### Customization
+
+#### Domain Configuration
+
+The `robots.txt` file automatically includes the domain specified in the `NEXT_DOMAIN` environment variable. This ensures that the robots.txt file correctly reflects the domain of your website.
+
+### Modifying the Logic
+
+If you need to customize the logic behind the `robots.txt` generation, you can do so by modifying the code in the `robots.ts` file. This file is located in the route directory of your Next.js project and contains the logic responsible for generating the `robots.txt` file during the build process.
+
+### Conclusion
+
+Managing your website's `robots.txt` file in your Next.js project is simple and hassle-free. Whether you're sticking with the default configuration or customizing it to suit your specific requirements, Next.js provides the flexibility you need to ensure your website is properly indexed by search engines.

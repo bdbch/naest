@@ -5,4 +5,41 @@ description: Learn how to generate a sitemap.xml for your site
 
 # Generating the sitemap.xml
 
-TBD
+Naest supports sitemap generation by default, making it easy to ensure your website is discoverable and well-organized for search engines.
+
+## Sitemap.xml Generation Logic
+
+In naest, generating the sitemap.xml is pretty straightforward. We stick with the default Next.js approach, so it's easy to understand and customize.
+
+### Default Approach
+
+We use Next.js's built-in `sitemap.ts` file to handle the heavy lifting. It goes through all the MDX files in your `content` folder and makes entries in the sitemap.xml accordingly.
+
+### Customization Options
+
+#### 1. Frontmatter Configuration
+
+You can tweak the sitemap entries by adding some extra info to your MDX files. Things like `changeFrequency` and `priority` let you control how often search engines should check your pages.
+
+Here's how you'd do it:
+
+```mdx
+---
+title: "My Page"
+description: "A brief description of the page."
+changeFrequency: weekly
+priority: 0.8
+---
+```
+
+#### 2. Custom Logic
+
+For those who want to dig deeper, you can mess around with the logic in the `app/sitemap.ts` file. This is where the magic happens. You can filter, sort, or even add data sources to make the sitemap work just the way you want it to.
+
+### Modifying the Logic
+
+To get your hands dirty, open up the `app/sitemap.ts` file in your project. It's all laid out there for you to tinker with. Go ahead and tweak things until the sitemap fits your project like a glove.
+
+### Conclusion
+
+With naest's Next.js template, managing your sitemap.xml is simple and customizable. Whether you're sticking with the basics or diving deep into the code, naest gives you the flexibility to make it your own.
