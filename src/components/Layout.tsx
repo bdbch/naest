@@ -2,6 +2,7 @@ import { SidebarConfig } from "@/types";
 import { DocsSidebar } from "./DocsSidebar";
 import { TableOfContent } from "./TableOfContent";
 import Link from "next/link";
+import { default as Logo } from "@/assets/logo.svg";
 
 export const Layout = ({
   children,
@@ -14,8 +15,12 @@ export const Layout = ({
     <div>
       <header className="sticky top-0 border-b border-neutral-800 bg-black bg-opacity-80 backdrop-blur-lg z-10">
         <div className="container h-16 flex gap-8 items-center justify-between">
-          <Link href="/" className="text-sm font-bold">
-            naest.dev
+          <Link
+            href="/"
+            className="flex items-center gap-2 leading-none font-bold"
+          >
+            <Logo className="w-6 h-6" />
+            naest
           </Link>
           <div className="flex items-center gap-4">
             <Link
